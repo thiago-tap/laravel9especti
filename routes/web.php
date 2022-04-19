@@ -1,7 +1,8 @@
 <?php
 
 use App\Http\Controllers\{
-    UserController
+    UserController,
+    DominioController
 };
 use App\Http\Controllers\Admin\CommentController;
 use Illuminate\Support\Facades\Artisan;
@@ -21,6 +22,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/users/create', [UserController::class, 'create'])->name('users.create');
     Route::post('/users', [UserController::class, 'store'])->name('users.store');
     Route::get('/users/{id}', [UserController::class, 'show'])->name('users.show');
+
+    Route::get('/dominio',[DominioController::class, 'index'])->name('domino.index');
 });
 
 Route::get('/', function () {
