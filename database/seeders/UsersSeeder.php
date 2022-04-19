@@ -18,7 +18,7 @@ class UsersSeeder extends Seeder
         User::create([
             'name' => 'Thiago Albuquerque',
             'email' => 'thiago@tenil.com.br',
-            'password' => bcrypt('123456789'),
+            'password' => bcrypt('12345678'),
         ]);
     }
 }
