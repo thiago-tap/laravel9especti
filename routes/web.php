@@ -29,7 +29,7 @@ Route::get('/', function () {
 
 Route::get('/limpar-cache', function () {
     Artisan::call('cache:clear');
-    return "Cache is cleared";
+    return "Cache Limpo!";
 });
 
 require __DIR__.'/auth.php';
